@@ -1,0 +1,170 @@
+----====================================================================
+RUNSPEC
+
+TITLE
+NOV 2005 ECLIPSE version of SAIGUP
+
+DIMENS
+40 120 20 /
+
+WATER
+OIL
+
+METRIC
+
+START
+1 'JAN' 2001 / 
+
+ 
+WELLDIMS
+----= NWMAXZ NCWMAX NGMAXZ NWGMAX
+    20   20   2     12  /
+
+TABDIMS
+------n sat tables, n PVT tables, N sat nodes, n pvt nodes, n fip regions, etc.
+6 1 28 4 /
+
+NSTACK
+200 /
+
+
+--SATOPTS
+--'DIRECT' 'IRREVERS' /
+
+noecho
+--======================================================================
+GRID
+
+INCLUDE
+SAIGUP.COORD /
+INCLUDE
+SAIGUP_A1.ZCORN /
+INCLUDE
+SAIGUP.ACTNUM /
+
+INCLUDE
+028.PERMX /
+INCLUDE
+028.PERMY /
+INCLUDE
+028.PERMZ /
+INCLUDE
+028.MULTX /
+INCLUDE
+028.MULTY /
+INCLUDE
+028.MULTZ /
+INCLUDE
+028.PORO /
+INCLUDE
+028.NTG /
+
+
+--========================================================
+-- EDIT
+-- INCLUDE
+--'/home/tom/SAIGUP_ECLIPSE_NOV05/TRANSGEN_FILES_PERMVAR/GENERAL_OUTPUT_05STDEV/028_A14_P21.EDITNNC' /
+--INCLUDE
+--'/home/tom/SAIGUP_ECLIPSE_NOV05/TRANSGEN_FILES_PERMVAR/GENERAL_OUTPUT_05STDEV/028_A14_P21.EDITNNC.001' /
+--INCLUDE
+--'/home/tom/SAIGUP_ECLIPSE_NOV05/TRANSGEN_FILES_PERMVAR/GENERAL_OUTPUT_05STDEV/028_A14_P21.TRANX' /
+--INCLUDE
+--'/home/tom/SAIGUP_ECLIPSE_NOV05/TRANSGEN_FILES_PERMVAR/GENERAL_OUTPUT_05STDEV/028_A14_P21.TRANY' /
+
+--=========================================================
+PROPS
+
+--            OIL      WAT       GAS
+DENSITY
+            0282 1000      0.01 /  
+-- nb 721 is the reservoir density.  this needs the equivalent
+-- surface density which is 0282 (i.e. 721*1.5 (FVF)
+--
+
+--NOt 100% sure about this:
+--       P           Bo         Vis
+PVDO
+100 1.5225 1.0
+200 1.5075 1.0
+250 1.5 1.0 
+400 1.4775 1.0 /
+--       P           Bw         Cw         Vis     Viscosibility
+PVTW
+250 1.0 1e-5 0.4 0.0 /
+--
+--       P             Cr
+ROCK
+        250 2e-5 /
+-- INCLUDE
+-- '/home/tom/SAIGUP_ECLIPSE_NOV05/include_data/swof_no_pc.txt' /
+--=================================================================
+REGIONS
+INCLUDE
+028.SATNUM /
+--=================================================================
+SOLUTION
+
+--     DATUMz  Pi@DATUM   WOC    Pc@WOC    GOC  Pc@GOC
+EQUIL
+        2000       250    2300      0     0   0     /
+--NB i'M GUESSING THE DATUM PRESSURE 
+
+--======================================================================
+SUMMARY
+--
+--  FIELD DATA:
+FOPR
+FOPT
+FWPR
+FWPT
+FWIR
+FWIT
+FWCT
+FRPV
+FOPV
+FWPV
+----WELL DATA
+WBHP
+/
+WOPR
+/
+WOPT
+/
+WWPR
+/
+WWPT
+/
+WWIR
+/
+WWIT
+/
+WSTAT
+/
+----------
+RUNSUM
+EXCEL
+--======================================================================
+SCHEDULE
+--
+--INCLUDE
+--'/home/tom/SAIGUP_ECLIPSE_NOV05/include_data/PDO_U.SCHEDULE' /
+
+
+RPTRST
+BASIC = 2 FLOWS /
+
+TUNING
+/
+/
+2* 1000 /
+
+
+----        days-
+TSTEP
+0.1  122*90 /
+
+--============================================================
+END
+ 
+
+
