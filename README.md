@@ -20,12 +20,43 @@ The steps are the following:
 
 If the compute times are 10 to 100 faster in `PyTorch`, we will proceed with converting more Matlab code to PyTorch tensor based calculations.
 
+## Datasets
+* MRST (downloaded)
+    * SPE9
+    * SPE10
+    * CaseB4
+    * SAIGUP
+* OPM
+    * SPE1
+    * SPE9
+    * SPE10: model1, model2
+* PUNQS3
+* SPE1
+* SPE2
+* SPE3
+* SPE5
+* SPE6
+* SPE9
+* SPE9-petrofaq
+* SPE10
+* VOLVE
+
+
+### Notes
+* SPE10 from MRST contains `.dat` and `.mat` files
+* Not all datasets from `OPM` included here; only SPE, SPE9 and SPE10.
+* SPE10 does not download using MRST-2018. It had to be downloaded from another source. MRST-2019 does download SPE10 normally
+
+
+
 ## References
 * This repository: https://github.com/f0nzie/reservoir_datasets
 
 * [MRST](https://www.sintef.no/projectweb/mrst/)
 
 * Book [An Introduction to Reservoir Simulation Using MATLAB, Octave* by Knut-Andreas Lie](https://www.cambridge.org/core/books/an-introduction-to-reservoir-simulation-using-matlabgnu-octave/F48C3D8C88A3F67E4D97D4E16970F894)
+
+* OPM datasets: https://github.com/OPM/opm-data
 
 
 
