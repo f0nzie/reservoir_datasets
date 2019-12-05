@@ -1,0 +1,75 @@
+------------------------------------------------------------------------
+-->An example of a restart run
+-- restart from CASE1 step 1
+-- Bring on 3 more production wells, PE1,2,3, controlled by wet gas rate
+------------------------------------------------------------------------
+
+--Specify name of save file and step to be loaded
+
+MULTIN
+
+LOAD
+'SPE3_GASCOND_CYCLING' 1 /
+
+SCHEDULE
+
+TSTEP
+365 /
+
+--2000a WELLSHUT is used for back-compatibility, prefered keyword is WELOPEN
+--WELLSHUT
+--I /
+WELOPEN
+I SHUT/
+/
+
+--Bring on 3 more production wells, PE1,2,3, controlled by wet gas rate
+
+--2000a WELLSPEC is used for back-compatibility, prefered keyword is WELSPECS
+--WELLSPEC
+--PE1 Field 6 6 7315 Sep /
+--PE2 Field 8 8 7315 Sep /
+--PE3 Field 9 9 7315 Sep /
+WELSPECS
+PE1 Field 6 6 7315 WGRA /
+PE2 Field 8 8 7315 WGRA /
+PE3 Field 9 9 7315 WGRA /
+/
+
+--2000a uses WELSEPC to associate separator with wells
+SEPCOND
+PE1 SEP /
+PE2 SEP /
+PE3 SEP /
+/
+
+--2000a WELLCOMP is for back-compatibility, prefered keyword is COMPDAT
+--WELLCOMP
+--PE1 6 6 3 4 1 /
+--PE2 8 8 3 4 1 /
+--PE3 9 9 3 4 1 /
+COMPDAT
+PE1 6 6 3 4 OPEN 1 /
+PE2 8 8 3 4 OPEN 1 /
+PE3 9 9 3 4 OPEN 1 /
+/
+
+--2000a WELLPROD is for back-compatibility, prefered keyword is WCONPROD
+--WELLPROD
+--PE1 WG 4* 500 2* 1000 /
+--PE2 WG 4* 500 2* 1000 /
+--PE3 WG 4* 500 2* 1000 /
+WCONPROD
+PE1 OPEN WGRA 5* 500 3* 1000 /
+PE2 OPEN WGRA 5* 500 3* 1000 /
+PE3 OPEN WGRA 5* 500 3* 1000 /
+/
+
+GRUPLIM
+Field 3* 50 2* Y /
+/
+
+TSTEP
+5*365 /
+
+END

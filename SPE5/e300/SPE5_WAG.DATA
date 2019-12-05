@@ -1,0 +1,342 @@
+------------------------------------------------------------------------
+-- SPE 16000
+-- "Fifth Comparative Solution Project : Evaluation of Miscible Flood Simulators"
+-- J.E. Killough, C.A. Kossack
+--
+-->The fifth SPE comparison problem , reported by Killough and Kossack
+-- ( 9th SPE Symp on Res. Sim., San Antonio, 1987).
+-- Dimension 7x7x3-
+-- 6 components
+-- FIELD units
+-- The run follows the first of the three suggested production schedules
+-- Solvent injection as part of a WAG cycle
+------------------------------------------------------------------------
+
+RUNSPEC   ==============================================================
+
+FIELD
+
+OIL
+WATER
+GAS
+
+COMPS
+6 /
+
+TABDIMS
+1 1 40 40 /
+
+DIMENS
+7 7 3 /
+
+EQLDIMS
+1 20 /
+
+WELLDIMS
+2 2 /
+
+START
+1 Jan 1990 /
+
+GRID    ================================================================
+
+INIT
+
+DXV
+7*500 /
+
+DYV
+7*500 /
+
+DZV
+20 30 50 /
+
+TOPS
+49*8325 49*8345 49*8375 /
+
+PORO
+147*0.3  /
+
+PERMX
+49*500 49*50 49*200 /
+
+PERMY
+49*500 49*50 49*200 /
+
+PERMZ
+49*50 49*50 49*25 /
+
+PROPS     ============================================================
+
+EOS
+PR /
+
+PRCORR
+
+RTEMP
+160 /
+
+STCOND
+60 14.7 /
+
+CNAMES
+C1
+C3
+C6
+C10
+C15
+C20
+/
+
+TCRIT
+ 343.0
+ 665.7
+ 913.4
+1111.8
+1270.0
+1380.0
+/
+
+PCRIT
+667.8
+616.3
+436.9
+304.0
+200.0
+162.0
+/
+
+ZCRIT
+0.290
+0.277
+0.264
+0.257
+0.245
+0.235
+/
+
+MW
+ 16.04
+ 44.10
+ 86.18
+149.29
+206.00
+282.00
+/
+
+ACF
+0.013
+0.1524
+0.3007
+0.4885
+0.6500
+0.8500
+/
+
+BIC
+   0.0
+   0.0    0.0
+   0.0    0.0    0.0
+   0.05   0.005  0.0     0.0
+   0.05   0.005  0.0     0.0     0.0 /
+
+STONE
+
+SWFN
+    0.2    0      45.0
+    0.2899 0.0022 19.03
+    0.3778 0.0180 10.07
+    0.4667 0.0607  4.90
+    0.5556 0.1438  1.8
+    0.6444 0.2809  0.5
+    0.7000 0.4089  0.05
+    0.7333 0.4855  0.01
+    0.8222 0.7709  0.0
+    0.9111 1.0000  0.0
+    1.00   1.0000  0.0 /
+
+SGFN
+    0.00   0.000   0.0
+    0.05   0.000   0.0
+    0.0889 0.001   0.0
+    0.1778 0.010   0.0
+    0.2667 0.030   0.001
+    0.3556 0.05    0.001
+    0.4444 0.10    0.03
+    0.5333 0.20    0.8
+    0.6222 0.35    3.0
+    0.65   0.39    4.0
+    0.7111 0.56    8.0
+    0.80   1.0    30.0
+/
+
+SOF3
+    0.00   0.0     0.0
+    0.0889 0.0     0.0
+    0.1500 0.0     0.0
+    0.1778 0.0     0.0110
+    0.2667 0.0     0.0370
+    0.3    0.0     0.0560
+    0.3556 0.0123  0.0878
+    0.4444 0.0835  0.1715
+    0.5333 0.2178  0.2963
+    0.6222 0.4153  0.4705
+    0.7111 0.6769  0.7023
+    0.80   1.0     1.0    /
+
+ROCKTAB
+ 1000.0 1.0   1.0
+ 2000.0 1.005 1.0
+ 3000.0 1.010 1.0
+ 4000.0 1.015 1.0
+ 5000.0 1.020 1.0
+ 6000.0 1.025 1.0
+ 7000.0 1.030 1.0
+ 8000.0 1.035 1.0
+ 9000.0 1.040 1.0
+10000.0 1.045 1.0 /
+
+WATERTAB
+ 1000.0     1.0099 0.70
+ 4000.0     1.0000 0.70
+ 9000.0     0.9835 0.70 /
+
+--Specify initial liquid composition
+
+ZMFVD
+1000.0  0.5 0.03 0.07 0.2 0.15 0.05
+10000.0 0.5 0.03 0.07 0.2 0.15 0.05 /
+
+--Surface densities : only the water value is used
+
+DENSITY
+1* 62.4 1* /
+
+SOLUTION   =============================================================
+
+--Request initial state solution output
+
+RPTSOL
+PRESSURE SOIL SWAT SGAS PSAT /
+
+EQUIL
+8400 4000 9000 0 7000 0 1 1 0  /
+
+SUMMARY    =============================================================
+
+--Request field GOR, water cut oil rate and total, gas rate
+
+FGOR
+FWCT
+FOPR
+FOPT
+FWPR
+
+RUNSUM
+
+SCHEDULE    ==========================================================
+
+AIMCON
+ 6* -1 /
+
+--Request FIP reports, group, sep and well data, and solution maps.
+
+SAVEEND
+
+RPTPRINT
+0 1 0 1 1 1 0 1 0 0 /
+
+--Specify solution maps of pressure and saturations
+
+RPTSCHED
+PRESSURE SOIL SWAT SGAS /
+
+--One stage separator conditions
+
+SEPCOND
+Sep Field 1 60 14.7 /
+/
+
+--Define injection and production wells
+
+--2000a WELLSPEC is used for back-compatibility, prefered keyword is WELSPECS
+--WELLSPEC
+--P Field 7 7 8400 Sep /
+WELSPECS
+P Field 7 7 8400 OIL /
+/
+
+--2000a uses WELSEPC to associate separator with wells
+WSEPCOND
+P SEP /
+/
+
+--2000a WELLCOMP is for back-compatibility, prefered keyword is COMPDAT
+--WELLCOMP
+--P 7 7 3 3 1 0.5 /
+COMPDAT
+P 7 7 3 3 1* 1 1* 0.5 /
+/
+
+--Well P on oil rate of 12000 stb/day, with min bhp of 1000 psi
+
+--2000a WELLPROD is for back-compatibility, prefered keyword is WCONPROD
+--WELLPROD
+--P oil 12000 3* 1000 /
+WCONPROD
+P OPEN ORAT 12000 4* 1000 /
+/
+
+--Limits on water cut and GOR
+--Note limit is on water cut, rather than water-oil ratio
+
+GRUPLIM
+Field 2* 0.8333 10 1* A Y /
+/
+
+TSTEP
+2*365 /
+
+--Define injection well
+
+WELLSTRE
+Solvent 0.77 0.20 0.03 0.0 0.0 /
+/
+
+--2000a WELLSPEC is used for back-compatibility, prefered keyword is WELSPECS
+--WELLSPEC
+--I Field 1 1 8335 /
+WELSPECS
+I Field 1 1 8335 GAS /
+/
+
+--2000a WELLCOMP is for back-compatibility, prefered keyword is COMPDAT
+--WELLCOMP
+--I 1 1 1 1 1 0.5 /
+COMPDAT
+I 1 1 1 1 OPEN 1 1* 0.5 /
+/
+
+--Start WAG cycles-----------------------------------------------------
+
+--2000a WELLINJE is for back-compatibility, prefered keyword is WCONINJE
+--WELLINJE
+--I Stream Solvent Gas 1* 12000 12000 /
+WCONINJE
+I GAS OPEN RATE 12000 /
+/
+WINJGAS
+I Stream Solvent /
+/
+WELTARG
+I WRATE 12000 /
+/
+
+WELLWAG
+I T W 365.25 G 365.25 /
+/
+
+TSTEP
+20*365.25 /
+
+END

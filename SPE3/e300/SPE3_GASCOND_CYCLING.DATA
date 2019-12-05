@@ -1,0 +1,465 @@
+-----------------------------------------------------------------------
+-- SPE 12278
+-- "Third SPE Comparative Solution Project : Gas Cycling of Retrograde Condensate Reservoir"
+-- Douglas E. Kenyon, G. Alda Behhie
+
+-->SPE third comparative problem
+-- 9 components
+-- Peng-Robinson EoS with correction
+-- Grid dimensions 9x9x4
+-- AIM solution method
+-- FIELD units
+-- 3-stage separator
+-- GRUPSALE and gas reinjection of remaining gas
+------------------------------------------------------------------------
+
+--RUNSPEC section--------------------------------------------------
+
+RUNSPEC
+
+--Request the FIELD unit set
+
+FIELD
+
+--Water is present
+
+WATER
+
+--AIM solution method
+
+AIM
+
+--Nine components in study ( plus water )
+
+COMPS
+9 /
+
+--Peng-Robinson equation of state to be used
+
+EOS
+PR /
+
+DIMENS
+9 9 4 /
+
+TABDIMS
+1 1 40 40 /
+
+--Is a gas condensate study
+ISGAS
+
+MULTSAVE
+0 /
+
+--Grid section--------------------------------------------------------
+
+GRID
+--Basic grid block sizes
+DX
+324*293.3 /
+
+DY
+324*293.3 /
+
+DZ
+162*30 162*50 /
+
+--Cell top depths - only for first layer specified
+TOPS
+81*7315 /
+
+
+PORO 
+324*0.13 /
+
+PERMX
+81*130 81*40 81*20 81*150 /
+
+PERMY
+81*130 81*40 81*20 81*150 /
+
+PERMZ
+81*13 81*4 81*2 81*15 /
+
+--Properties section-----------------------------------------------
+
+PROPS
+
+NCOMPS
+9 /
+
+EOS
+PR /
+
+-- Peng-Robinson correction
+
+PRCORR
+
+-- Standard temperature and pressure in Deg F      and PSIA
+
+STCOND
+60.0 14.7 /
+
+-- Component names
+
+CNAMES
+CO2 N2 C1 C2 C3 C4-6 C7+1 C7+2 C7+3 /
+
+-- Critical temperatures Deg R
+
+TCRIT
+548.46000    227.16000    343.08000    549.77400    665.64000
+806.54054    838.11282   1058.03863   1291.89071              /
+
+-- Critical pressures PSIA
+
+PCRIT
+1071.33111    492.31265    667.78170    708.34238    618.69739
+514.92549    410.74956    247.56341    160.41589              /
+
+-- Critical Z-factors
+
+ZCRIT
+ .27408       .29115       .28473       .28463       .27748
+ .27640       .26120       .22706       .20137              /
+
+-- Acentric factors
+
+ACF
+ .22500       .04000       .01300       .09860       .15240
+ .21575       .31230       .55670       .91692              /
+
+-- Molecular Weights
+
+MW
+ 44.01000     28.01300     16.04300     30.07000     44.09700
+ 66.86942    107.77943    198.56203    335.19790              /
+
+-- Omega_A values
+
+OMEGAA
+ .4572355     .4572355     .5340210     .4572355     .4572355
+ .4572355     .6373344     .6373344     .6373344              /
+
+-- Omega_B values
+
+OMEGAB
+ .0777961     .0777961     .0777961     .0777961     .0777961
+ .0777961     .0872878     .0872878     .0872878              /
+
+-- Default fluid sample composition
+
+ZMFVD
+      1.00000       .01210       .01940       .65990       .08690
+       .05910       .09670       .04745       .01515       .00330
+  10000.00000       .01210       .01940       .65990       .08690
+       .05910       .09670       .04745       .01515       .00330 /
+
+-- Boiling point temperatures Deg R
+
+TBOIL
+    350.46000    139.32000    201.06000    332.10000    415.98000
+    523.33222    689.67140    958.31604   1270.40061              /
+
+-- Reference temperatures Deg R
+
+TREF
+    527.40000    140.58000    201.06000    329.40000    415.80000
+    526.05233    519.67000    519.67000    519.67000              /
+
+-- Reference densities LB/FT3
+
+DREF
+     48.50653     50.19209     26.53189     34.21053     36.33308
+     37.87047     45.60035     50.88507     55.89861              /
+
+-- Parachors (Dynes/cm)
+
+PARACHOR
+     78.00000     41.00000     77.00000    108.00000    150.30000
+    213.52089    331.78241    516.45301    853.48860              /
+
+-- Binary Interaction Coefficients
+
+BIC
+-.0200
+ .1000  .0360
+ .1300  .0500  .000000
+ .1350  .0800  .000000  .000
+ .1277  .1002  .092810  .000 .000
+ .1000  .1000  .130663  .006 .006 .0
+ .1000  .1000  .130663  .006 .006 .0 .0
+ .1000  .1000  .130663  .006 .006 .0 .0 .0 /
+
+-- Reservoir temperature in Deg F
+
+RTEMP
+200.0 /
+
+--Water saturation functions
+
+SWFN
+    0.16  0      50
+    0.20  0.002  32
+    0.24  0.010  21
+    0.28  0.020  15.5
+    0.32  0.033  12.0
+    0.36  0.049  9.2
+    0.40  0.066  7.0
+    0.44  0.090  5.3
+    0.48  0.119  4.2
+    0.52  0.150  3.4
+    0.56  0.186  2.7
+    0.60  0.227  2.1
+    0.64  0.277  1.7
+    0.68  0.330  1.3
+    0.72  0.390  1.0
+    0.76  0.462  0.7
+    0.8   0.540  0.5
+    0.84  0.620  0.4
+    0.88  0.710  0.3
+    0.92  0.800  0.2
+    0.96  0.900  0.1
+    1.00  1.000  0.0 /
+
+--Gas saturation functions
+
+SGFN
+    0.00  0.000  0.0
+    0.04  0.005  0.0
+    0.08  0.013  0.0
+    0.12  0.026  0.0
+    0.16  0.040  0.0
+    0.20  0.058  0.0
+    0.24  0.078  0.0
+    0.28  0.100  0.0
+    0.32  0.126  0.0
+    0.36  0.156  0.0
+    0.40  0.187  0.0
+    0.44  0.222  0.0
+    0.48  0.260  0.0
+    0.52  0.300  0.0
+    0.56  0.349  0.0
+    0.60  0.400  0.0
+    0.64  0.450  0.0
+    0.68  0.505  0.0
+    0.72  0.562  0.0
+    0.76  0.620  0.0
+    0.80  0.680  0.0
+    0.84  0.740  0.0
+/
+
+--Oil saturation functions
+
+SOF3
+    0.00  0.000  0.000
+    0.04  0.000  0.000
+    0.08  0.000  0.000
+    0.12  0.000  0.000
+    0.16  0.000  0.000
+    0.20  0.000  0.000
+    0.24  0.000  0.000
+    0.28  0.005  0.005
+    0.32  0.012  0.012
+    0.36  0.024  0.024
+    0.40  0.040  0.040
+    0.44  0.060  0.060
+    0.48  0.082  0.082
+    0.52  0.112  0.112
+    0.56  0.150  0.150
+    0.60  0.196  0.196
+    0.68  0.315  0.315
+    0.72  0.400  0.400
+    0.76  0.513  0.513
+    0.80  0.650  0.650
+    0.84  0.800  0.800 /
+
+--Rock and water pressure data
+
+ROCK
+3550 0.000004 /
+
+PVTW
+3550 1.0 0.000003 0.31 0.0 /
+
+--Surface density of water
+
+DENSITY
+1* 63.0 1* /
+
+--Solution section------------------------------------------------------
+
+SOLUTION
+
+--Equilibration data - initial pressure 3500 psi at 7500, which is
+--the oil-water and the oil-gas contact depth
+
+EQUIL
+7500 3550 7500 0 7500 0 1 1 0  /
+
+RPTRST
+PRESSURE SOIL YMF VOIL /
+
+RPTSOL
+PRESSURE SOIL /
+
+FIELDSEP
+ 1   80 815 /
+ 2   80  65 /
+ 3   60 14.7 /
+/
+
+SUMMARY    =============================================================
+
+ALL
+
+RUNSUM
+
+--Field oil production rate and total, GOR and field pressure
+
+FOPR
+FOPT
+FGOR
+FPR
+WXMF
+P 1 /
+/
+WXMF
+P 2 /
+/
+WXMF
+P 3 /
+/
+WXMF
+P 4 /
+/
+
+
+--Producer block data
+
+BVOIL
+7 7 4 /
+/
+BSOIL
+7 7 4 /
+/
+BSWAT
+7 7 4 /
+/
+BSGAS
+7 7 4 /
+/
+BPRES
+1 1 1 /
+/
+BXMF
+1 1 1 6 /
+/
+BYMF
+1 1 1 6 /
+/
+
+--Schedule section------------------------------------------------------
+
+SCHEDULE
+
+--Define separator ; third stage represents stock tank
+
+SEPCOND
+SEP FIELD 1   80 815  /
+SEP FIELD 2   80  65  /
+SEP FIELD 3   60 14.7 /
+/
+
+--Define injection and production wells
+
+--2000a WELLSPEC is used for back-compatibility, prefered keyword is WELSPECS
+--WELLSPEC
+--I FIELD 1 1 7330 /
+--P FIELD 7 7 7400 SEP /
+--/
+WELSPECS
+I FIELD 1 1 7330 GAS/
+P FIELD 7 7 7400 GAS/
+/
+
+--2000a uses WELSEPC to associate separator with wells
+WSEPCOND
+P SEP /
+/
+
+--2000a WELLCOMP is for back-compatibility, prefered keyword is COMPDAT
+--WELLCOMP
+--I 1 1 1 2 1 /
+--P 7 7 3 4 1 /
+--/
+COMPDAT
+I 1 1 1 2 1* 1 /
+P 7 7 3 4 1* 1 /
+/
+
+--Well P set to target gas rate of 6200, with min bhp of 500 psi
+
+--2000a WELLPROD is for back-compatibility, prefered keyword is WCONPROD
+--WELLPROD
+--P GA 1* 1* 6200 1* 500 /
+WCONPROD
+P OPEN GRAT 1* 1* 6200 2* 500 /
+/
+
+--Sales gas rate of 1500 MSCF/Day specified
+
+GRUPSALE
+Field 1500 /
+/
+
+--Well I injects all unsold vapour
+
+--2000a WELLINJE is for back-compatibility, prefered keyword is WCONINJE
+--for reinjection, use GCONINJE
+--WELLINJE
+--I GV Field REINJE 3* 4000 3* 1 /
+
+GCONINJE
+Field GAS REIN 2* 1 /
+/
+GINJGAS
+Field GV Field /
+/
+
+WCONINJE
+I GAS OPEN GRUP 2* 4000 /
+/
+
+--Set 15 day initial time step
+
+--Time steps to 9 years
+TSTEP
+3285 /
+
+SAVE
+
+--Change separator conditions
+
+SEPCOND
+SEP FIELD 1   80 315  /
+SEP FIELD 2   80  65  /
+SEP FIELD 3   60 14.7 /
+/
+
+--Time steps to 10 years : ten day step after separator modification
+
+TSTEP
+365 /
+
+--2000a WELLSHUT is for back-compatibility, prefered keyword is WELOPEN
+--WELLSHUT
+--I /
+WELOPEN
+I SHUT/
+/
+
+TSTEP
+1825 /
+
+END

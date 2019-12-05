@@ -1,0 +1,338 @@
+-- =====================================================================
+-- RESTART FROM CHAP RUN AT 720 DAYS
+-- CHANGES IN DATA TO TEST GRAF PROCESSING OF RESTART RUNS:
+-- WELL P1 RATE CHANGE TO 300 BPD, ON ECONOMIC CONTROL WCT 0.8
+-- WELL P2 3,1,1-2 OPENED AT 900 DAYS
+-- P2 CONNECTION 2 SHUT AT 960 DAYS
+-- RUN TO 1000 DAYS
+-- =====================================================================
+RUNSPEC
+TITLE
+      Test restart Chappelear 3 phase radial coning study
+
+DIMENS
+   10    1   15  /
+
+RADIAL
+
+NONNC
+
+OIL
+
+WATER
+
+GAS
+
+DISGAS
+
+FIELD
+
+EQLDIMS
+    1  100   10    1   20 /
+
+TABDIMS
+    1    1   19   15   15   15 /
+
+REGDIMS
+   15    1    0    0  /
+
+WELLDIMS
+    2    2    1    2 /
+
+NUPCOL
+    4 /
+
+START
+   1 'JAN' 1982  /
+
+NSTACK
+   24 /
+
+GRID     ===============================================================
+
+INRAD
+  0.25 /
+DRV
+    1.75     2.32     5.01    10.84    23.39
+   50.55   109.21   235.92   509.68  1101.08  /
+
+
+EQUALS
+
+      'DTHETA'  360   /  BOX DEFAULTS TO THE WHOLE GRID
+
+      'DZ'      20     1 10  1  1  1  1  /  LAYER 1
+      'PERMR'   35    /
+      'PORO'    0.087 /
+      'TOPS'    9000  /
+
+      'DZ'      15     1 10  1  1  2  2  /  LAYER 2
+      'PERMR'   47.5  /
+      'PORO'    0.097 /
+
+      'DZ'      26     1 10  1  1  3  3  /  LAYER 3
+      'PERMR'   148   /
+      'PORO'    0.111 /
+
+      'DZ'      15     1 10  1  1  4  4  /  LAYER 4
+      'PERMR'   202   /
+      'PORO'    0.160 /
+
+      'DZ'      16     1 10  1  1  5  5  /  LAYER 5
+      'PERMR'   90    /
+      'PORO'    0.130 /
+
+      'DZ'      14     1 10  1  1  6  6  /  LAYER 6
+      'PERMR'   418.5 /
+      'PORO'    0.170 /
+
+      'DZ'      8      1 10  1  1  7  7  /  LAYER 7
+      'PERMR'   775   /
+      'PORO'    0.170 /
+
+      'DZ'      8      1 10  1  1  8  8  /  LAYER 8
+      'PERMR'   60    /
+      'PORO'    0.080 /
+
+      'DZ'      18     1 10  1  1  9  9  /  LAYER 9
+      'PERMR'   682   /
+      'PORO'    0.140 /
+
+      'DZ'      12     1 10  1  1 10 10  /  LAYER 10
+      'PERMR'   472   /
+      'PORO'    0.130 /
+
+      'DZ'      19     1 10  1  1 11 11  /  LAYER 11
+      'PERMR'   125   /
+      'PORO'    0.120 /
+
+      'DZ'      18     1 10  1  1 12 12  /  LAYER 12
+      'PERMR'   300   /
+      'PORO'    0.105 /
+
+      'DZ'      20     1 10  1  1 13 13  /  LAYER 13
+      'PERMR'   137.5 /
+      'PORO'    0.120 /
+
+      'DZ'      50     1 10  1  1 14 14  /  LAYER 14
+      'PERMR'   191   /
+      'PORO'    0.116 /
+
+      'DZ'      100    1 10  1  1 15 15  /  LAYER 15
+      'PERMR'   350   /
+      'PORO'    0.157 /
+
+/   EQUALS IS TERMINATED BY A NULL RECORD
+
+COPY
+         'PERMR'      'PERMZ'     /
+/
+MULTIPLY
+        'PERMZ'     0.1    /
+/
+
+PROPS    ===============================================================
+SWFN
+
+    0.22  0       7
+    0.3   0.07    4
+    0.4   0.15    3
+    0.5   0.24    2.5
+    0.6   0.33    2
+    0.8   0.65    1
+    0.9   0.83    0.5
+    1     1       0      /
+
+SGFN       1 TABLES   19 NODES IN EACH           FIELD   16:31 18 JAN 85
+    .0000  .0000  .0000
+    .0400  .0000  .2000
+    .1000  .0220  .5000
+    .2000  .1000 1.0000
+    .3000  .2400 1.5000
+    .4000  .3400 2.0000
+    .5000  .4200 2.5000
+    .6000  .5000 3.0000
+    .7000  .8125 3.5000
+    .7800 1.0000 3.9000
+/
+
+SOF3
+    0        0         0
+    0.2      0         0
+    0.38      0.00432   0
+    0.4      0.0048    0.004
+    0.48      0.05288   0.02
+    0.5      0.0649    0.036
+    0.58      0.11298   0.1
+    0.6      0.125     0.146
+    0.68      0.345     0.33
+    0.7      0.4       0.42
+    0.74      0.7       0.6
+    0.78     1         1          /
+
+
+PVTW
+        3600     1.00341        3.0D-6          0.96             0  /
+
+ROCK
+         3600          4.0D-6   /
+
+DENSITY
+           45   63.02   0.0702  /
+
+PVDG
+      400    5.9   0.013
+      800    2.95  0.0135
+     1200    1.96  0.014
+     1600    1.47  0.0145
+     2000    1.18  0.015
+     2400    0.98  0.0155
+     2800    0.84  0.016
+     3200    0.74  0.0165
+     3600    0.65  0.017
+     4000    0.59  0.0175
+     4400    0.54  0.018
+     4800    0.49  0.0185
+     5200    0.45  0.019
+     5600    0.42  0.0195 /
+
+PVTO
+   0.165      400   1.012    1.17  /
+   0.335      800   1.0255   1.14  /
+   0.500     1200   1.038    1.11  /
+   0.665     1600   1.051    1.08  /
+   0.828     2000   1.063    1.06  /
+   0.985     2400   1.075    1.03  /
+   1.130     2800   1.087    1.00  /
+   1.270     3200   1.0985   0.98  /
+   1.390     3600   1.11     0.95  /
+   1.500     4000   1.12     0.94  /
+   1.600     4400   1.13     0.92  /
+   1.676     4800   1.14     0.91  /
+   1.750     5200   1.148    0.9   /
+   1.810     5600   1.155    0.89
+             6000   1.1504   0.89
+             6400   1.1458   0.89
+             6800   1.1412   0.89
+             7200   1.1367   0.89  /
+/
+
+
+REGIONS  ===============================================================
+FIPNUM
+  10*1  10*2  10*3  10*4  10*5  10*6  10*7  10*8  10*9  10*10
+  10*11 10*12 10*13 10*14 10*15  /
+
+
+SOLUTION ===============================================================
+-- RESTART FROM 720 DAYS (REPORT STEP 9)
+RESTART
+  'SPE2_CHAP' 9 /
+
+SUMMARY ================================================================
+-------- THIS SECTION SPECIFIES DATA TO BE WRITTEN TO THE SUMMARY FILES
+-------- AND WHICH MAY LATER BE USED WITH THE ECLIPSE GRAPHICS PACKAGE
+------------------------------------------------------------------------
+
+-- FIELD Water Cut, GOR and Pressure
+FWCT
+FGOR
+FPR
+
+-- FIELD Rates for Oil, Water, Liquid & 3 Phase Voidage
+FOPR
+FWPR
+FLPR
+FVPR
+
+-- BOTTOM HOLE PRESSURE FOR WELL
+WBHP
+'P1'
+/
+
+
+WGPR
+/
+
+WBHP
+P2 /
+
+RUNSUM
+
+SCHEDULE ===============================================================
+-------- THE SCHEDULE SECTION DEFINES THE OPERATIONS TO BE SIMULATED
+------------------------------------------------------------------------
+
+-- FREE GAS IS NOT ALLOWED TO DISSOLVE IN UNDERSATURATED OIL
+DRSDT
+ 0.0 /
+-- RESTART AFTER 720 DAYS
+-- CUT OIL RATE TO 300 BPD TO COMPARE WITH NORMAL RUN
+WELTARG
+'P1', 'ORAT'  300.000000 /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP, MAX STEP 30 DAYS
+TUNING
+  1  30 /
+/
+ 12 1 50 /
+
+-- ADVANCE TO 800 DAYS
+TSTEP
+ 80.00000
+/
+
+-- CONNECTION WCT LIMIT .8
+CECON                                            FIELD   14:12 14 JUN 90
+'P1      '   1   1   7   8    .8000     1*        1*    /
+/
+
+
+-- ADVANCE TO 900 DAYS
+TSTEP
+ 100.0000
+/
+--
+-- OPEN WELL P2
+--
+WELSPECS                                         FIELD   14:13 14 JUN 90
+'P2      ','G       '   3   1     1*   'GAS'   1*   'STD'
+ 'SHUT','YES' 1*  'SEG' 1*  /
+/
+
+COMPDAT                                          FIELD   14:13 14 JUN 90
+'P2      '  1*  1*   1   2 'OPEN'  1*    1*     .4000
+    1*      1*      1*     'Z' /
+/
+
+WCONPROD                                         FIELD   14:14 14 JUN 90
+'P2      ','OPEN','GRAT'     1*          1*      200.000000
+     1*          1*      3000.000    1*       1*     1*    /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP, MAX STEP 30 DAYS
+TUNING
+  1  30 /
+/
+ 12 1 50 /
+
+TSTEP
+30 30 /
+
+WELOPEN                                          FIELD   14:15 14 JUN 90
+'P2      ', 'SHUT'          3    1    2  /
+/
+
+
+-- RESET OUTPUT CONTROLS TO GET FULL OUTPUT FOR LAST REPORT
+RPTSCHED
+   'PRES' 'SOIL' 'SWAT' 'SGAS' 'RS' 'RV' 'RESTART=2' 'FIP=2' 'WELLS=2' 'VFPPROD=1' 
+'SUMMARY=2' 'CPU=2' 'AQUCT' 'WELSPECS' 'NEWTON=2' /
+
+-- ADVANCE TO END OF SIMULATION (1000 DAYS)
+TSTEP
+ 2*20
+/
+
+END      ==============================================================

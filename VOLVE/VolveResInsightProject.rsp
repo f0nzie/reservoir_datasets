@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResInsightProject>
+    <DocumentFileName>C:/Users/Public/Documents/EclipseRuns/VOLVE/VolveResInsightProject.rsp</DocumentFileName>
+    <ProjectFileVersionString>2018.11.1</ProjectFileVersionString>
+    <NextValidCaseId>1</NextValidCaseId>
+    <NextValidCaseGroupId>0</NextValidCaseGroupId>
+    <OilFields>
+        <ResInsightOilField>
+            <AnalysisModels>
+                <ResInsightAnalysisModels>
+                    <Reservoirs>
+                        <EclipseCase>
+                            <CaseUserDescription>VOLVE_2016</CaseUserDescription>
+                            <CaseId>0</CaseId>
+                            <DefaultFormationNames></DefaultFormationNames>
+                            <TimeStepFilter>
+                                <RimTimeStepFilter>
+                                    <FilterType>TS_ALL</FilterType>
+                                    <FirstTimeStep>0</FirstTimeStep>
+                                    <LastTimeStep>28</LastTimeStep>
+                                    <Interval>1</Interval>
+                                    <DateFormat>dd.MMM yyyy</DateFormat>
+                                    <TimeStepIndicesToImport>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 </TimeStepIndicesToImport>
+                                </RimTimeStepFilter>
+                            </TimeStepFilter>
+                            <IntersectionViewCollection>
+                                <Intersection2dViewCollection>
+                                    <IntersectionViews/>
+                                </Intersection2dViewCollection>
+                            </IntersectionViewCollection>
+                            <ReservoirViews>
+                                <ReservoirView>
+                                    <WindowController>
+                                        <MdiWindowController>
+                                            <MainWindowID>0</MainWindowID>
+                                            <xPos>0</xPos>
+                                            <yPos>0</yPos>
+                                            <Width>1047</Width>
+                                            <Height>608</Height>
+                                            <IsMaximized>True </IsMaximized>
+                                        </MdiWindowController>
+                                    </WindowController>
+                                    <ShowWindow>True </ShowWindow>
+                                    <UserDescription>View 1</UserDescription>
+                                    <CameraPosition>1 0 0 -3146.09020537927 0 0 1 -3269.96692971421 0 -1 0 375.502209921894 0 0 0 1</CameraPosition>
+                                    <CameraPointOfInterest>3283.47698031307 1163.21924127361 2861.61810964989</CameraPointOfInterest>
+                                    <PerspectiveProjection>True </PerspectiveProjection>
+                                    <GridZScale>5</GridZScale>
+                                    <ViewBackgroundColor>0.689999997615814 0.769999980926514 0.870000004768372</ViewBackgroundColor>
+                                    <MaximumFrameRate>10</MaximumFrameRate>
+                                    <AnimationMode>True </AnimationMode>
+                                    <CurrentTimeStep>0</CurrentTimeStep>
+                                    <MeshMode>FAULTS_MESH</MeshMode>
+                                    <SurfaceMode>SURFACE</SurfaceMode>
+                                    <ShowGridBox>True </ShowGridBox>
+                                    <DisableLighting>False </DisableLighting>
+                                    <RangeFilters>
+                                        <CellRangeFilterCollection>
+                                            <RangeFilters/>
+                                            <Active>True </Active>
+                                        </CellRangeFilterCollection>
+                                    </RangeFilters>
+                                    <CrossSections>
+                                        <CrossSectionCollection>
+                                            <CrossSections/>
+                                            <IntersectionBoxes/>
+                                            <Active>True </Active>
+                                        </CrossSectionCollection>
+                                    </CrossSections>
+                                    <GridCollection>
+                                        <GridCollection>
+                                            <IsActive>True </IsActive>
+                                            <MainGrid>
+                                                <GridInfo>
+                                                    <IsActive>True </IsActive>
+                                                    <GridName>Main Grid</GridName>
+                                                    <GridIndex>0</GridIndex>
+                                                </GridInfo>
+                                            </MainGrid>
+                                            <PersistentLgrs>
+                                                <GridInfoCollection>
+                                                    <IsActive>True </IsActive>
+                                                    <GridInfos/>
+                                                </GridInfoCollection>
+                                            </PersistentLgrs>
+                                        </GridCollection>
+                                    </GridCollection>
+                                    <OverlayInfoConfig>
+                                        <View3dOverlayInfoConfig>
+                                            <Active>True </Active>
+                                            <ShowAnimProgress>True </ShowAnimProgress>
+                                            <ShowInfoText>True </ShowInfoText>
+                                            <ShowResultInfo>True </ShowResultInfo>
+                                            <ShowHistogram>True </ShowHistogram>
+                                            <ShowVolumeWeightedMean>True </ShowVolumeWeightedMean>
+                                            <StatisticsTimeRange>ALL_TIMESTEPS</StatisticsTimeRange>
+                                            <StatisticsCellRange>ALL_CELLS</StatisticsCellRange>
+                                        </View3dOverlayInfoConfig>
+                                    </OverlayInfoConfig>
+                                    <GridCellResult>
+                                        <ResultSlot>
+                                            <ResultType>DYNAMIC_NATIVE</ResultType>
+                                            <PorosityModelType>MATRIX_MODEL</PorosityModelType>
+                                            <ResultVariable>SOIL</ResultVariable>
+                                            <FlowDiagSolution>.. .. FlowDiagSolutions 0</FlowDiagSolution>
+                                            <SelectedTracers></SelectedTracers>
+                                            <SelectedInjectorTracers></SelectedInjectorTracers>
+                                            <SelectedProducerTracers></SelectedProducerTracers>
+                                            <SelectedSouringTracers></SelectedSouringTracers>
+                                            <FlowTracerSelectionMode>FLOW_TR_INJ_AND_PROD</FlowTracerSelectionMode>
+                                            <PhaseSelection>PHASE_ALL</PhaseSelection>
+                                            <MSyncSelectedInjProd>False </MSyncSelectedInjProd>
+                                            <MSyncSelectedProdInj>False </MSyncSelectedProdInj>
+                                            <ResultVarLegendDefinitionList>
+                                                <Legend>
+                                                    <ShowLegend>True </ShowLegend>
+                                                    <NumberOfLevels>8</NumberOfLevels>
+                                                    <Precision>4</Precision>
+                                                    <TickNumberFormat>FIXED</TickNumberFormat>
+                                                    <ColorRangeMode>NORMAL</ColorRangeMode>
+                                                    <MappingMode>LinearContinuous</MappingMode>
+                                                    <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                    <UserDefinedMax>1</UserDefinedMax>
+                                                    <UserDefinedMin>0</UserDefinedMin>
+                                                    <ResultVariableUsage>None</ResultVariableUsage>
+                                                </Legend>
+                                                <Legend>
+                                                    <ShowLegend>True </ShowLegend>
+                                                    <NumberOfLevels>8</NumberOfLevels>
+                                                    <Precision>4</Precision>
+                                                    <TickNumberFormat>FIXED</TickNumberFormat>
+                                                    <ColorRangeMode>NORMAL</ColorRangeMode>
+                                                    <MappingMode>LinearContinuous</MappingMode>
+                                                    <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                    <UserDefinedMax>1</UserDefinedMax>
+                                                    <UserDefinedMin>0</UserDefinedMin>
+                                                    <ResultVariableUsage>SOIL</ResultVariableUsage>
+                                                </Legend>
+                                            </ResultVarLegendDefinitionList>
+                                            <TernaryLegendDefinition>
+                                                <RimTernaryLegendConfig>
+                                                    <ShowTernaryLegend>True </ShowTernaryLegend>
+                                                    <Precision>2</Precision>
+                                                    <RangeType>USER_DEFINED_MAX_MIN</RangeType>
+                                                    <ternaryRangeSummary></ternaryRangeSummary>
+                                                    <UserDefinedMaxSoil>1</UserDefinedMaxSoil>
+                                                    <UserDefinedMinSoil>0</UserDefinedMinSoil>
+                                                    <UserDefinedMaxSgas>1</UserDefinedMaxSgas>
+                                                    <UserDefinedMinSgas>0</UserDefinedMinSgas>
+                                                    <UserDefinedMaxSwat>1</UserDefinedMaxSwat>
+                                                    <UserDefinedMinSwat>0</UserDefinedMinSwat>
+                                                </RimTernaryLegendConfig>
+                                            </TernaryLegendDefinition>
+                                            <LegendDefinitionPtrField>ResultVarLegendDefinitionList 1</LegendDefinitionPtrField>
+                                        </ResultSlot>
+                                    </GridCellResult>
+                                    <GridCellEdgeResult>
+                                        <CellEdgeResultSlot>
+                                            <EnableCellEdgeColors>False </EnableCellEdgeColors>
+                                            <propertyType>MULTI_AXIS_STATIC_PROPERTY</propertyType>
+                                            <CellEdgeVariable>MULT</CellEdgeVariable>
+                                            <UseXVariable>True </UseXVariable>
+                                            <UseYVariable>True </UseYVariable>
+                                            <UseZVariable>True </UseZVariable>
+                                            <LegendDefinition>
+                                                <Legend>
+                                                    <ShowLegend>True </ShowLegend>
+                                                    <NumberOfLevels>8</NumberOfLevels>
+                                                    <Precision>4</Precision>
+                                                    <TickNumberFormat>FIXED</TickNumberFormat>
+                                                    <ColorRangeMode>PINK_WHITE</ColorRangeMode>
+                                                    <MappingMode>LinearContinuous</MappingMode>
+                                                    <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                    <UserDefinedMax>1</UserDefinedMax>
+                                                    <UserDefinedMin>0</UserDefinedMin>
+                                                    <ResultVariableUsage></ResultVariableUsage>
+                                                </Legend>
+                                            </LegendDefinition>
+                                            <SingleVarEdgeResult>
+                                                <ResultSlot>
+                                                    <ResultType>DYNAMIC_NATIVE</ResultType>
+                                                    <PorosityModelType>MATRIX_MODEL</PorosityModelType>
+                                                    <ResultVariable>None</ResultVariable>
+                                                    <FlowDiagSolution>.. .. .. FlowDiagSolutions 0</FlowDiagSolution>
+                                                    <SelectedTracers></SelectedTracers>
+                                                    <SelectedInjectorTracers></SelectedInjectorTracers>
+                                                    <SelectedProducerTracers></SelectedProducerTracers>
+                                                    <SelectedSouringTracers></SelectedSouringTracers>
+                                                    <FlowTracerSelectionMode>FLOW_TR_INJ_AND_PROD</FlowTracerSelectionMode>
+                                                    <PhaseSelection>PHASE_ALL</PhaseSelection>
+                                                    <MSyncSelectedInjProd>False </MSyncSelectedInjProd>
+                                                    <MSyncSelectedProdInj>False </MSyncSelectedProdInj>
+                                                    <ResultVarLegendDefinitionList>
+                                                        <Legend>
+                                                            <ShowLegend>True </ShowLegend>
+                                                            <NumberOfLevels>8</NumberOfLevels>
+                                                            <Precision>4</Precision>
+                                                            <TickNumberFormat>FIXED</TickNumberFormat>
+                                                            <ColorRangeMode>NORMAL</ColorRangeMode>
+                                                            <MappingMode>LinearContinuous</MappingMode>
+                                                            <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                            <UserDefinedMax>1</UserDefinedMax>
+                                                            <UserDefinedMin>0</UserDefinedMin>
+                                                            <ResultVariableUsage>None</ResultVariableUsage>
+                                                        </Legend>
+                                                    </ResultVarLegendDefinitionList>
+                                                    <TernaryLegendDefinition>
+                                                        <RimTernaryLegendConfig>
+                                                            <ShowTernaryLegend>True </ShowTernaryLegend>
+                                                            <Precision>2</Precision>
+                                                            <RangeType>USER_DEFINED_MAX_MIN</RangeType>
+                                                            <ternaryRangeSummary></ternaryRangeSummary>
+                                                            <UserDefinedMaxSoil>1</UserDefinedMaxSoil>
+                                                            <UserDefinedMinSoil>0</UserDefinedMinSoil>
+                                                            <UserDefinedMaxSgas>1</UserDefinedMaxSgas>
+                                                            <UserDefinedMinSgas>0</UserDefinedMinSgas>
+                                                            <UserDefinedMaxSwat>1</UserDefinedMaxSwat>
+                                                            <UserDefinedMinSwat>0</UserDefinedMinSwat>
+                                                        </RimTernaryLegendConfig>
+                                                    </TernaryLegendDefinition>
+                                                    <LegendDefinitionPtrField>ResultVarLegendDefinitionList 0</LegendDefinitionPtrField>
+                                                </ResultSlot>
+                                            </SingleVarEdgeResult>
+                                        </CellEdgeResultSlot>
+                                    </GridCellEdgeResult>
+                                    <FaultResultSettings>
+                                        <RimFaultResultSlot>
+                                            <ShowCustomFaultResult>False </ShowCustomFaultResult>
+                                            <CustomResultSlot>
+                                                <ResultSlot>
+                                                    <ResultType>DYNAMIC_NATIVE</ResultType>
+                                                    <PorosityModelType>MATRIX_MODEL</PorosityModelType>
+                                                    <ResultVariable>None</ResultVariable>
+                                                    <FlowDiagSolution>.. .. .. FlowDiagSolutions 0</FlowDiagSolution>
+                                                    <SelectedTracers></SelectedTracers>
+                                                    <SelectedInjectorTracers></SelectedInjectorTracers>
+                                                    <SelectedProducerTracers></SelectedProducerTracers>
+                                                    <SelectedSouringTracers></SelectedSouringTracers>
+                                                    <FlowTracerSelectionMode>FLOW_TR_INJ_AND_PROD</FlowTracerSelectionMode>
+                                                    <PhaseSelection>PHASE_ALL</PhaseSelection>
+                                                    <MSyncSelectedInjProd>False </MSyncSelectedInjProd>
+                                                    <MSyncSelectedProdInj>False </MSyncSelectedProdInj>
+                                                    <ResultVarLegendDefinitionList>
+                                                        <Legend>
+                                                            <ShowLegend>True </ShowLegend>
+                                                            <NumberOfLevels>8</NumberOfLevels>
+                                                            <Precision>4</Precision>
+                                                            <TickNumberFormat>FIXED</TickNumberFormat>
+                                                            <ColorRangeMode>NORMAL</ColorRangeMode>
+                                                            <MappingMode>LinearContinuous</MappingMode>
+                                                            <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                            <UserDefinedMax>1</UserDefinedMax>
+                                                            <UserDefinedMin>0</UserDefinedMin>
+                                                            <ResultVariableUsage>None</ResultVariableUsage>
+                                                        </Legend>
+                                                    </ResultVarLegendDefinitionList>
+                                                    <TernaryLegendDefinition>
+                                                        <RimTernaryLegendConfig>
+                                                            <ShowTernaryLegend>True </ShowTernaryLegend>
+                                                            <Precision>2</Precision>
+                                                            <RangeType>USER_DEFINED_MAX_MIN</RangeType>
+                                                            <ternaryRangeSummary></ternaryRangeSummary>
+                                                            <UserDefinedMaxSoil>1</UserDefinedMaxSoil>
+                                                            <UserDefinedMinSoil>0</UserDefinedMinSoil>
+                                                            <UserDefinedMaxSgas>1</UserDefinedMaxSgas>
+                                                            <UserDefinedMinSgas>0</UserDefinedMinSgas>
+                                                            <UserDefinedMaxSwat>1</UserDefinedMaxSwat>
+                                                            <UserDefinedMinSwat>0</UserDefinedMinSwat>
+                                                        </RimTernaryLegendConfig>
+                                                    </TernaryLegendDefinition>
+                                                    <LegendDefinitionPtrField>ResultVarLegendDefinitionList 0</LegendDefinitionPtrField>
+                                                </ResultSlot>
+                                            </CustomResultSlot>
+                                        </RimFaultResultSlot>
+                                    </FaultResultSettings>
+                                    <StimPlanColors>
+                                        <RimStimPlanColors>
+                                            <IsChecked>True </IsChecked>
+                                            <ResultName></ResultName>
+                                            <DefaultColor>0.647058844566345 0.164705887436867 0.164705887436867</DefaultColor>
+                                            <LegendConfigurations/>
+                                            <ShowStimPlanMesh>True </ShowStimPlanMesh>
+                                            <StimPlanCellVizMode>COLOR_INTERPOLATION</StimPlanCellVizMode>
+                                        </RimStimPlanColors>
+                                    </StimPlanColors>
+                                    <VirtualPerforationResult>
+                                        <RimVirtualPerforationResults>
+                                            <ShowConnectionFactors>False </ShowConnectionFactors>
+                                            <ShowClosedConnections>True </ShowClosedConnections>
+                                            <GeometryScaleFactor>2</GeometryScaleFactor>
+                                            <LegendDefinition>
+                                                <Legend>
+                                                    <ShowLegend>True </ShowLegend>
+                                                    <NumberOfLevels>8</NumberOfLevels>
+                                                    <Precision>4</Precision>
+                                                    <TickNumberFormat>FIXED</TickNumberFormat>
+                                                    <ColorRangeMode>NORMAL</ColorRangeMode>
+                                                    <MappingMode>LinearContinuous</MappingMode>
+                                                    <RangeType>AUTOMATIC_ALLTIMESTEPS</RangeType>
+                                                    <UserDefinedMax>1</UserDefinedMax>
+                                                    <UserDefinedMin>0</UserDefinedMin>
+                                                    <ResultVariableUsage></ResultVariableUsage>
+                                                </Legend>
+                                            </LegendDefinition>
+                                        </RimVirtualPerforationResults>
+                                    </VirtualPerforationResult>
+                                    <WellCollection>
+                                        <Wells>
+                                            <Active>True </Active>
+                                            <ShowWellsIntersectingVisibleCells>False </ShowWellsIntersectingVisibleCells>
+                                            <WellHeadScale>1</WellHeadScale>
+                                            <WellPipeRadiusScale>0.1</WellPipeRadiusScale>
+                                            <CellCenterSphereScale>0.2</CellCenterSphereScale>
+                                            <WellLabelColor>0.920000016689301 0.920000016689301 0.920000016689301</WellLabelColor>
+                                            <ShowConnectionStatusColors>True </ShowConnectionStatusColors>
+                                            <WellColorForApply>1 1 0</WellColorForApply>
+                                            <WellPipeVertexCount>12</WellPipeVertexCount>
+                                            <WellPipeCoordType>WELLPIPE_INTERPOLATED</WellPipeCoordType>
+                                            <DefaultWellFenceDirection>K_DIRECTION</DefaultWellFenceDirection>
+                                            <WellCellTransparency>0.5</WellCellTransparency>
+                                            <IsAutoDetectingBranches>True </IsAutoDetectingBranches>
+                                            <WellHeadPosition>WELLHEAD_POS_TOP_COLUMN</WellHeadPosition>
+                                            <Wells>
+                                                <Well>
+                                                    <WellName>I-F-1B</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.501960813999176 0.243137255311012 0.458823531866074</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>I-F-4</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.909803926944733 0.317647069692612 0.541176497936249</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>I-F-5</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.713725507259369 0.0156862754374743 0.113725490868092</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>I-F4G</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.835294127464294 0.196078434586525 0.0705882385373116</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-11B</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.835294127464294 0.466666668653488 0.372549027204514</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-12</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.960784316062927 0.411764711141586 0.0313725508749485</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-14</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.674509823322296 0.380392163991928 0.0431372560560703</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-15C</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.819607853889465 0.647058844566345 0.352941185235977</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-15D</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.701960802078247 0.705882370471954 0</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-1C</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.172549024224281 0.368627458810806 0.117647059261799</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>P-F-5</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.176470592617989 0.490196079015732 0.43529412150383</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>PIL-N</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.270588248968124 0.498039215803146 0.666666686534882</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                                <Well>
+                                                    <WellName>PIL-NW</WellName>
+                                                    <ShowWell>True </ShowWell>
+                                                    <ShowWellLabel>True </ShowWellLabel>
+                                                    <ShowWellHead>True </ShowWellHead>
+                                                    <ShowWellPipe>True </ShowWellPipe>
+                                                    <ShowWellSpheres>False </ShowWellSpheres>
+                                                    <WellHeadScaleFactor>1</WellHeadScaleFactor>
+                                                    <WellPipeRadiusScale>1</WellPipeRadiusScale>
+                                                    <WellPipeColor>0.180392161011696 0.298039227724075 0.878431379795074</WellPipeColor>
+                                                    <ShowWellCells>False </ShowWellCells>
+                                                    <ShowWellCellFence>False </ShowWellCellFence>
+                                                    <FractureCollection>
+                                                        <SimWellFractureCollection>
+                                                            <Fractures/>
+                                                        </SimWellFractureCollection>
+                                                    </FractureCollection>
+                                                </Well>
+                                            </Wells>
+                                            <ShowWellCommunicationLines>False </ShowWellCommunicationLines>
+                                        </Wells>
+                                    </WellCollection>
+                                    <FaultCollection>
+                                        <Faults>
+                                            <Active>True </Active>
+                                            <ShowFaultFaces>True </ShowFaultFaces>
+                                            <ShowOppositeFaultFaces>True </ShowOppositeFaultFaces>
+                                            <ShowFaultsOutsideFilters>True </ShowFaultsOutsideFilters>
+                                            <FaultFaceCulling>FAULT_BACK_FACE_CULLING</FaultFaceCulling>
+                                            <ShowFaultLabel>False </ShowFaultLabel>
+                                            <FaultLabelColor>0.920000016689301 0.920000016689301 0.920000016689301</FaultLabelColor>
+                                            <ShowNNCs>True </ShowNNCs>
+                                            <HideNncsWhenNoResultIsAvailable>True </HideNncsWhenNoResultIsAvailable>
+                                            <NoCommonAreaNnncCollection>
+                                                <RimNoCommonAreaNncCollection>
+                                                    <UserDescription>No Common Area Nncs</UserDescription>
+                                                </RimNoCommonAreaNncCollection>
+                                            </NoCommonAreaNnncCollection>
+                                            <Faults>
+                                                <Fault>
+                                                    <FaultName>Undefined Grid Faults</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.396078437566757 0.517647087574005 0.376470595598221</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>Undefined Grid Faults With Inactive</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.513725519180298 0.549019634723663</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F10_E</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.823529422283173 0.690196096897125 0.439215689897537</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_Em_N</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.549019634723663 0.670588254928589 0.933333337306976</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_Em_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.803921580314636 0.513725519180298</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_N</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.862745106220245 0.831372559070587 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.509803950786591 1 0.470588237047195</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_Sal_N</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.650980412960052 0.862745106220245 0.843137264251709</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_Sal_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.658823549747467 0.862745106220245 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_W_P1</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.250980406999588 0.925490200519562</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_W_P2N</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.396078437566757 0.517647087574005 0.376470595598221</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F1_W_P2S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.513725519180298 0.549019634723663</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F2_Em_C</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.823529422283173 0.690196096897125 0.439215689897537</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F2_N1</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.549019634723663 0.670588254928589 0.933333337306976</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F2_N2</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.803921580314636 0.513725519180298</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F2_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.862745106220245 0.831372559070587 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F2_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.509803950786591 1 0.470588237047195</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F3_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.650980412960052 0.862745106220245 0.843137264251709</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F3_W_N</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.658823549747467 0.862745106220245 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F3_W_S</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.250980406999588 0.925490200519562</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F4_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.396078437566757 0.517647087574005 0.376470595598221</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F5_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.513725519180298 0.549019634723663</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F6_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.823529422283173 0.690196096897125 0.439215689897537</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F7_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.549019634723663 0.670588254928589 0.933333337306976</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F8_E</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.803921580314636 0.513725519180298</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F8_W</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.862745106220245 0.831372559070587 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F9_E</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.509803950786591 1 0.470588237047195</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F_11_E</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.650980412960052 0.862745106220245 0.843137264251709</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F_N_NW</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>0.658823549747467 0.862745106220245 0.650980412960052</Color>
+                                                </Fault>
+                                                <Fault>
+                                                    <FaultName>F_S_NW</FaultName>
+                                                    <ShowFault>True </ShowFault>
+                                                    <Color>1 0.250980406999588 0.925490200519562</Color>
+                                                </Fault>
+                                            </Faults>
+                                        </Faults>
+                                    </FaultCollection>
+                                    <PropertyFilters>
+                                        <CellPropertyFilters>
+                                            <Active>True </Active>
+                                            <PropertyFilters/>
+                                        </CellPropertyFilters>
+                                    </PropertyFilters>
+                                    <ShowInactiveCells>False </ShowInactiveCells>
+                                    <ShowInvalidCells>False </ShowInvalidCells>
+                                </ReservoirView>
+                            </ReservoirViews>
+                            <MatrixModelResults>
+                                <ReservoirCellResultStorage>
+                                    <ResultCacheFileName></ResultCacheFileName>
+                                    <ResultCacheEntries/>
+                                </ReservoirCellResultStorage>
+                            </MatrixModelResults>
+                            <FractureModelResults>
+                                <ReservoirCellResultStorage>
+                                    <ResultCacheFileName></ResultCacheFileName>
+                                    <ResultCacheEntries/>
+                                </ReservoirCellResultStorage>
+                            </FractureModelResults>
+                            <FlipXAxis>False </FlipXAxis>
+                            <FlipYAxis>False </FlipYAxis>
+                            <CachedFileNamesContainingFaults>C:/Users/Public/Documents/EclipseRuns/VOLVE/FAULT_NW_NEG.GRDECL;C:/Users/Public/Documents/EclipseRuns/VOLVE/GRID_postF1B_Nov2013_locupd_12112013.grdecl</CachedFileNamesContainingFaults>
+                            <ContourMaps>
+                                <Eclipse2dViewCollection>
+                                    <EclipseViews/>
+                                </Eclipse2dViewCollection>
+                            </ContourMaps>
+                            <CaseFileName>C:\Users\Public\Documents\EclipseRuns\VOLVE\VOLVE_2016.GRID</CaseFileName>
+                            <UnitSystem>UNITS_METRIC</UnitSystem>
+                            <FlowDiagSolutions>
+                                <FlowDiagSolution>
+                                    <UserDescription>All Wells</UserDescription>
+                                </FlowDiagSolution>
+                            </FlowDiagSolutions>
+                            <SourSimFileName></SourSimFileName>
+                        </EclipseCase>
+                    </Reservoirs>
+                    <CaseGroups/>
+                </ResInsightAnalysisModels>
+            </AnalysisModels>
+            <GeoMechModels/>
+            <WellPathCollection>
+                <WellPaths>
+                    <Active>True </Active>
+                    <ShowWellPathLabel>True </ShowWellPathLabel>
+                    <WellPathLabelColor>0.920000016689301 0.920000016689301 0.920000016689301</WellPathLabelColor>
+                    <GlobalWellPathVisibility>ALL_ON</GlobalWellPathVisibility>
+                    <WellPathRadiusScale>0.1</WellPathRadiusScale>
+                    <WellPathClip>True </WellPathClip>
+                    <WellPathClipZDistance>100</WellPathClipZDistance>
+                    <WellPaths/>
+                </WellPaths>
+            </WellPathCollection>
+            <FractureDefinitionCollection>
+                <FractureDefinitionCollection>
+                    <DefaultUnitForTemplates>UNITS_METRIC</DefaultUnitForTemplates>
+                    <FractureDefinitions/>
+                    <NextValidFractureTemplateId>0</NextValidFractureTemplateId>
+                </FractureDefinitionCollection>
+            </FractureDefinitionCollection>
+            <SummaryCaseCollection>
+                <SummaryCaseCollection>
+                    <SummaryCases>
+                        <FileSummaryCase>
+                            <ShortName>VOLVE_2016</ShortName>
+                            <AutoShortyName>False </AutoShortyName>
+                            <SummaryHeaderFilename>C:/Users/Public/Documents/EclipseRuns/VOLVE/VOLVE_2016.SMSPEC</SummaryHeaderFilename>
+                            <IncludeRestartFiles>False </IncludeRestartFiles>
+                        </FileSummaryCase>
+                    </SummaryCases>
+                    <SummaryCaseCollections/>
+                </SummaryCaseCollection>
+            </SummaryCaseCollection>
+            <FormationNamesCollection>
+                <FormationNamesCollectionObject>
+                    <FormationNamesList/>
+                </FormationNamesCollectionObject>
+            </FormationNamesCollection>
+            <ObservedDataCollection>
+                <ObservedDataCollection>
+                    <ObservedDataArray/>
+                </ObservedDataCollection>
+            </ObservedDataCollection>
+        </ResInsightOilField>
+    </OilFields>
+    <ScriptCollection>
+        <ScriptLocation>
+            <ScriptDirectory></ScriptDirectory>
+            <CalcScripts/>
+            <SubDirectories/>
+        </ScriptLocation>
+    </ScriptCollection>
+    <WellPathImport>
+        <RimWellPathImport>
+            <WellTypeSurvey>True </WellTypeSurvey>
+            <WellTypePlans>True </WellTypePlans>
+            <UtmMode>UTM_FILTER_OFF</UtmMode>
+            <UtmNorth>0</UtmNorth>
+            <UtmSouth>0</UtmSouth>
+            <UtmEast>0</UtmEast>
+            <UtmWest>0</UtmWest>
+            <Regions/>
+        </RimWellPathImport>
+    </WellPathImport>
+    <MainPlotCollection>
+        <MainPlotCollection>
+            <Show>True </Show>
+            <WellLogPlotCollection>
+                <WellLogPlotCollection>
+                    <WellLogPlots/>
+                </WellLogPlotCollection>
+            </WellLogPlotCollection>
+            <RftPlotCollection>
+                <WellRftPlotCollection>
+                    <RftPlots/>
+                </WellRftPlotCollection>
+            </RftPlotCollection>
+            <PltPlotCollection>
+                <WellPltPlotCollection>
+                    <PltPlots/>
+                </WellPltPlotCollection>
+            </PltPlotCollection>
+            <SummaryPlotCollection>
+                <SummaryPlotCollection>
+                    <SummaryPlots/>
+                </SummaryPlotCollection>
+            </SummaryPlotCollection>
+            <SummaryCrossPlotCollection>
+                <SummaryCrossPlotCollection>
+                    <SummaryCrossPlots/>
+                </SummaryCrossPlotCollection>
+            </SummaryCrossPlotCollection>
+            <FlowPlotCollection>
+                <FlowPlotCollection>
+                    <FlowCharacteristicsPlot>
+                        <FlowCharacteristicsPlot>
+                            <WindowController>
+                                <MdiWindowController>
+                                    <MainWindowID>1</MainWindowID>
+                                    <xPos>0</xPos>
+                                    <yPos>0</yPos>
+                                    <Width>-1</Width>
+                                    <Height>-1</Height>
+                                    <IsMaximized>False </IsMaximized>
+                                </MdiWindowController>
+                            </WindowController>
+                            <ShowWindow>False </ShowWindow>
+                            <FlowCase></FlowCase>
+                            <FlowDiagSolution></FlowDiagSolution>
+                            <TimeSelectionType>SELECTED</TimeSelectionType>
+                            <SelectedTimeSteps></SelectedTimeSteps>
+                            <SelectedTimeStepsUi></SelectedTimeStepsUi>
+                            <CellPVThreshold>0.1</CellPVThreshold>
+                            <ShowLegend>True </ShowLegend>
+                            <CellFilter>CELLS_ACTIVE</CellFilter>
+                            <CellFilterView></CellFilterView>
+                            <TracerFilter></TracerFilter>
+                            <SelectedTracerNames></SelectedTracerNames>
+                            <MinCommunication>0</MinCommunication>
+                            <MaxTof>146000</MaxTof>
+                        </FlowCharacteristicsPlot>
+                    </FlowCharacteristicsPlot>
+                    <DefaultWellAllocationPlot/>
+                    <StoredWellAllocationPlots/>
+                    <StoredFlowCharacteristicsPlots/>
+                </FlowPlotCollection>
+            </FlowPlotCollection>
+        </MainPlotCollection>
+    </MainPlotCollection>
+    <LinkedViews>
+        <RimViewLinkerCollection>
+            <Active>True </Active>
+            <ViewLinkers/>
+        </RimViewLinkerCollection>
+    </LinkedViews>
+    <CalculationCollection>
+        <RimSummaryCalculationCollection>
+            <Calculations/>
+        </RimSummaryCalculationCollection>
+    </CalculationCollection>
+    <CommandObjects/>
+    <MultiSnapshotDefinitions/>
+    <TreeViewState>-1-100000020;-1-1000000;-1-10000;-1-100</TreeViewState>
+    <TreeViewCurrentModelIndexPath></TreeViewCurrentModelIndexPath>
+    <PlotWindowTreeViewState></PlotWindowTreeViewState>
+    <PlotWindowTreeViewCurrentModelIndexPath>0 0</PlotWindowTreeViewCurrentModelIndexPath>
+    <show3DWindow>True </show3DWindow>
+    <showPlotWindow>False </showPlotWindow>
+    <DialogData>
+        <RimDialogData>
+            <ExportCarfin>
+                <RicExportCarfinUi>
+                    <CellRange>
+                        <RicCellRangeUi>
+                            <Case></Case>
+                            <GridIndex>0</GridIndex>
+                            <StartIndexI>1</StartIndexI>
+                            <StartIndexJ>1</StartIndexJ>
+                            <StartIndexK>1</StartIndexK>
+                            <CellCountI>1</CellCountI>
+                            <CellCountJ>1</CellCountJ>
+                            <CellCountK>1</CellCountK>
+                        </RicCellRangeUi>
+                    </CellRange>
+                    <ExportFileName></ExportFileName>
+                    <CaseToApply></CaseToApply>
+                    <CellCountI>2</CellCountI>
+                    <CellCountJ>2</CellCountJ>
+                    <CellCountK>2</CellCountK>
+                    <MaxWellCount>8</MaxWellCount>
+                </RicExportCarfinUi>
+            </ExportCarfin>
+            <ExportCompletionData>
+                <RicExportCompletionDataSettingsUi>
+                    <Folder></Folder>
+                    <CaseToApply></CaseToApply>
+                    <FileSplit>SPLIT_ON_WELL_AND_COMPLETION_TYPE</FileSplit>
+                    <compdatExport>TRANSMISSIBILITIES</compdatExport>
+                    <TimeStepIndex>0</TimeStepIndex>
+                    <IncludeMSW>False </IncludeMSW>
+                    <UseLateralNTG>False </UseLateralNTG>
+                    <IncludePerforations>True </IncludePerforations>
+                    <IncludeFishbones>True </IncludeFishbones>
+                    <IncludeFractures>True </IncludeFractures>
+                    <TransScalingType>False </TransScalingType>
+                    <TransScalingTimeStep>0</TransScalingTimeStep>
+                    <TransScalingWBHPSource>WBHP_SUMMARY</TransScalingWBHPSource>
+                    <TransScalingWBHP>200</TransScalingWBHP>
+                    <ExcludeMainBoreForFishbones>False </ExcludeMainBoreForFishbones>
+                    <ReportCompletionTypesSeparately>INDIVIDUALLY</ReportCompletionTypesSeparately>
+                </RicExportCompletionDataSettingsUi>
+            </ExportCompletionData>
+            <MultipleFractionsData>
+                <RiuCreateMultipleFractionsUi>
+                    <SourceCase></SourceCase>
+                    <MinDistanceFromWellTd>10</MinDistanceFromWellTd>
+                    <MaxFracturesPerWell>10</MaxFracturesPerWell>
+                    <Options/>
+                    <FractureCreationSummary>-- Selected Wells     
+   
+</FractureCreationSummary>
+                </RiuCreateMultipleFractionsUi>
+            </MultipleFractionsData>
+            <HoloLenseExportToFolderData>
+                <RicHoloLensExportToFolderUi>
+                    <ViewForExport></ViewForExport>
+                    <ExportFolder></ExportFolder>
+                </RicHoloLensExportToFolderUi>
+            </HoloLenseExportToFolderData>
+            <ExportwellPathsData>
+                <RicExportWellPathsUi>
+                    <ExportFolder></ExportFolder>
+                    <MdStepSize>5</MdStepSize>
+                </RicExportWellPathsUi>
+            </ExportwellPathsData>
+            <ExportLgr>
+                <RicExportLgrUi>
+                    <ExportFolder></ExportFolder>
+                    <CaseToApply></CaseToApply>
+                    <TimeStepIndex>0</TimeStepIndex>
+                    <IncludePerforations>True </IncludePerforations>
+                    <IncludeFractures>True </IncludeFractures>
+                    <IncludeFishbones>True </IncludeFishbones>
+                    <CellCountI>2</CellCountI>
+                    <CellCountJ>2</CellCountJ>
+                    <CellCountK>2</CellCountK>
+                    <SplitType>LGR_PER_COMPLETION</SplitType>
+                </RicExportLgrUi>
+            </ExportLgr>
+            <MockModelSettings>
+                <MockModelSettings>
+                    <CellCountX>100</CellCountX>
+                    <CellCountY>100</CellCountY>
+                    <CellCountZ>10</CellCountZ>
+                    <TotalCellCount>1103806595072</TotalCellCount>
+                    <ResultCount>3</ResultCount>
+                    <TimeStepCount>10</TimeStepCount>
+                </MockModelSettings>
+            </MockModelSettings>
+        </RimDialogData>
+    </DialogData>
+</ResInsightProject>

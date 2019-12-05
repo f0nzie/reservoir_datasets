@@ -1,0 +1,488 @@
+-- =====================================================================
+-- ECLIPSE 100 CHAP TEST DATA (REVISED JULY 1990)
+-- NOTE:  THIS DATASET PRODUCES THE OUTPUT FILES TO BE USED FOR
+--        TESTING GRAF.  THE PROBLEM IS THE SAME AS THAT IN
+--        THE NOIO BENCHMARK EXAMPLE.  THE WELL NAME HAS BEEN
+--        CHANGED FROM 'PRODUCER' TO 'P1'. (THE OLD VERSION OF
+--        THE CHAP DATASET CAN BE FOUND IN CHAPOLD.DATA)
+-- =====================================================================
+-- THIS IS THE SECOND SPE COMPARISON PROBLEM , REPORTED BY CHAPPELEAR
+-- AND NOLEN AT THE SIXTH SPE SYMPOSIUM ON RESERVOIR SIMULATION , NEW
+-- ORLEANS, JANUARY 82 . IT IS  A SINGLE WELL CONING  STUDY , WITH THE
+-- WELL CONNECTED TO TWO GRID BLOCKS. DURING THE PRODUCTION SCHEDULE,
+-- THE WELL RATE IS SUBJECT TO LARGE CHANGES, AND AT ABOUT 250 DAYS
+-- CHANGES FROM FLOW RATE TO BHP CONTROL.
+-- =====================================================================
+RUNSPEC
+TITLE
+                 Chappelear 3 phase radial coning study
+
+DIMENS
+   10    1   15  /
+
+RADIAL
+
+NONNC
+
+OIL
+
+WATER
+
+GAS
+
+DISGAS
+
+FIELD
+
+EQLDIMS
+    1  100   10    1   20 /
+
+TABDIMS
+    1    1   19   15   15   15 /
+
+REGDIMS
+   15    1    0    0  /
+
+WELLDIMS
+    1    2    1    1 /
+
+NUPCOL
+    4 /
+
+START
+   1 'JAN' 1982  /
+
+NSTACK
+   24 /
+
+DEBUG
+  2  0  0   0  0  0  1 /
+
+GRID     ===============================================================
+-------- IN THIS SECTION , THE GEOMETRY OF THE SIMULATION GRID AND THE
+-------- ROCK PERMEABILITIES AND POROSITIES ARE DEFINED.
+------------------------------------------------------------------------
+
+COLUMNS
+  10  60 /
+--3456789
+         INIT 
+           
+         SAVE
+          /
+         COLUMNS
+           1  80 /
+
+--  SPECIFY INNER RADIUS OF 1ST GRID BLOCK IN THE RADIAL DIRECTION
+
+INRAD
+  0.25 /
+
+
+--  SPECIFY GRID BLOCK DIMENSIONS IN THE R DIRECTION
+DRV
+    1.75     2.32     5.01    10.84    23.39
+   50.55   109.21   235.92   509.68  1101.08  /
+
+
+-- SPECIFY CELL THICKNESSES ( DZ ), RADIAL PERMEABILITIES ( PERMR )
+-- AND POROSITIES ( PORO ) FOR EACH LAYER OF THE GRID. ALSO CELL TOP
+-- DEPTHS ( TOPS ) FOR LAYER 1. DTHETA IS SET TO 360 DEGREES FOR EVERY
+-- GRID BLOCK IN THE RESERVOIR.
+--     ARRAY    VALUE  ------ BOX ------
+EQUALS
+
+      'DTHETA'  360   /  BOX DEFAULTS TO THE WHOLE GRID
+
+      'DZ'      20     1 10  1  1  1  1  /  LAYER 1
+      'PERMR'   35    /
+      'PORO'    0.087 /
+      'TOPS'    9000  /
+
+      'DZ'      15     1 10  1  1  2  2  /  LAYER 2
+      'PERMR'   47.5  /
+      'PORO'    0.097 /
+
+      'DZ'      26     1 10  1  1  3  3  /  LAYER 3
+      'PERMR'   148   /
+      'PORO'    0.111 /
+
+      'DZ'      15     1 10  1  1  4  4  /  LAYER 4
+      'PERMR'   202   /
+      'PORO'    0.160 /
+
+      'DZ'      16     1 10  1  1  5  5  /  LAYER 5
+      'PERMR'   90    /
+      'PORO'    0.130 /
+
+      'DZ'      14     1 10  1  1  6  6  /  LAYER 6
+      'PERMR'   418.5 /
+      'PORO'    0.170 /
+
+      'DZ'      8      1 10  1  1  7  7  /  LAYER 7
+      'PERMR'   775   /
+      'PORO'    0.170 /
+
+      'DZ'      8      1 10  1  1  8  8  /  LAYER 8
+      'PERMR'   60    /
+      'PORO'    0.080 /
+
+      'DZ'      18     1 10  1  1  9  9  /  LAYER 9
+      'PERMR'   682   /
+      'PORO'    0.140 /
+
+      'DZ'      12     1 10  1  1 10 10  /  LAYER 10
+      'PERMR'   472   /
+      'PORO'    0.130 /
+
+      'DZ'      19     1 10  1  1 11 11  /  LAYER 11
+      'PERMR'   125   /
+      'PORO'    0.120 /
+
+      'DZ'      18     1 10  1  1 12 12  /  LAYER 12
+      'PERMR'   300   /
+      'PORO'    0.105 /
+
+      'DZ'      20     1 10  1  1 13 13  /  LAYER 13
+      'PERMR'   137.5 /
+      'PORO'    0.120 /
+
+      'DZ'      50     1 10  1  1 14 14  /  LAYER 14
+      'PERMR'   191   /
+      'PORO'    0.116 /
+
+      'DZ'      100    1 10  1  1 15 15  /  LAYER 15
+      'PERMR'   350   /
+      'PORO'    0.157 /
+
+/   EQUALS IS TERMINATED BY A NULL RECORD
+
+--  COPY RADIAL PERMEABILITIES ( PERMR ) INTO VERTICAL PERMEABILITIES
+--  ( PERMZ ) FOR THE WHOLE GRID, AND THEN MULTIPLY PERMZ BY 0.1.
+-------- SOURCE     DESTINATION
+COPY
+         'PERMR'      'PERMZ'     /
+/
+-------- ARRAY     FACTOR
+MULTIPLY
+        'PERMZ'     0.1    /
+/
+
+-- OUTPUT OF CELL DIMENSIONS, PERMEABILITIES, POROSITY AND TOPS
+-- DATA IS REQUESTED, AND OF THE CALCULATED PORE VOLUMES, CELL
+-- CENTRE DEPTHS AND X AND Z DIRECTION TRANSMISSIBILITIES
+RPTGRID
+ -- Report Levels for Grid Section Data
+ -- 
+ 'DR' 
+ 'DTHETA' 
+ 'DZ' 
+ 'PERMR' 
+ 'PERMZ' 
+ 'PORO' 
+ 'TOPS' 
+ 'PORV' 
+ 'DEPTH' 
+ 'TRANR' 
+ 'TRANZ' 
+ / 
+
+PROPS    ===============================================================
+-------- THE PROPS SECTION DEFINES THE REL. PERMEABILITIES, CAPILLARY
+-------- PRESSURES, AND THE PVT PROPERTIES OF THE RESERVOIR FLUIDS
+----------------------------------------------------------------------
+-- WATER RELATIVE PERMEABILITY AND CAPILLARY PRESSURE ARE TABULATED AS
+-- A FUNCTION OF WATER SATURATION.
+--
+--  SWAT   KRW   PCOW
+SWFN
+
+    0.22  0       7
+    0.3   0.07    4
+    0.4   0.15    3
+    0.5   0.24    2.5
+    0.6   0.33    2
+    0.8   0.65    1
+    0.9   0.83    0.5
+    1     1       0      /
+
+-- SIMILARLY FOR GAS
+--
+--  SGAS   KRG   PCOG
+SGFN       1 TABLES   19 NODES IN EACH           FIELD   16:31 18 JAN 85
+    .0000  .0000  .0000
+    .0400  .0000  .2000
+    .1000  .0220  .5000
+    .2000  .1000 1.0000
+    .3000  .2400 1.5000
+    .4000  .3400 2.0000
+    .5000  .4200 2.5000
+    .6000  .5000 3.0000
+    .7000  .8125 3.5000
+    .7800 1.0000 3.9000
+/
+
+-- OIL RELATIVE PERMEABILITY IS TABULATED AGAINST OIL SATURATION
+-- FOR OIL-WATER AND OIL-GAS-CONNATE WATER CASES
+--
+--  SOIL     KROW     KROG
+SOF3
+    0        0         0
+    0.2      0         0
+    0.38      0.00432   0
+    0.4      0.0048    0.004
+    0.48      0.05288   0.02
+    0.5      0.0649    0.036
+    0.58      0.11298   0.1
+    0.6      0.125     0.146
+    0.68      0.345     0.33
+    0.7      0.4       0.42
+    0.74      0.7       0.6
+    0.78     1         1          /
+
+
+-- PVT PROPERTIES OF WATER
+--
+--    REF. PRES. REF. FVF  COMPRESSIBILITY  REF VISCOSITY  VISCOSIBILITY
+PVTW
+        3600     1.00341        3.0D-6          0.96             0  /
+
+
+-- ROCK COMPRESSIBILITY
+--
+--    REF. PRES   COMPRESSIBILITY
+ROCK
+         3600          4.0D-6   /
+
+-- SURFACE DENSITIES OF RESERVOIR FLUIDS
+--
+--        OIL   WATER   GAS
+DENSITY
+           45   63.02   0.0702  /
+
+-- PVT PROPERTIES OF DRY GAS (NO VAPOURISED OIL)
+-- WE WOULD USE PVTG TO SPECIFY THE PROPERTIES OF WET GAS
+--
+--   PGAS   BGAS   VISGAS
+PVDG
+      400    5.9   0.013
+      800    2.95  0.0135
+     1200    1.96  0.014
+     1600    1.47  0.0145
+     2000    1.18  0.015
+     2400    0.98  0.0155
+     2800    0.84  0.016
+     3200    0.74  0.0165
+     3600    0.65  0.017
+     4000    0.59  0.0175
+     4400    0.54  0.018
+     4800    0.49  0.0185
+     5200    0.45  0.019
+     5600    0.42  0.0195 /
+
+-- PVT PROPERTIES OF LIVE OIL (WITH DISSOLVED GAS)
+-- WE WOULD USE PVDO TO SPECIFY THE PROPERTIES OF DEAD OIL
+--
+-- FOR EACH VALUE OF RS THE SATURATION PRESSURE, FVF AND VISCOSITY
+-- ARE SPECIFIED. FOR RS=1.81  THE FVF AND VISCOSITY OF
+-- UNDERSATURATED OIL ARE DEFINED AS A FUNCTION OF PRESSURE. DATA
+-- FOR UNDERSATURATED OIL MAY BE SUPPLIED FOR ANY RS, BUT MUST BE
+-- SUPPLIED FOR THE HIGHEST RS (1.81).
+--
+--   RS      POIL    FVFO    VISO
+PVTO
+   0.165      400   1.012    1.17  /
+   0.335      800   1.0255   1.14  /
+   0.500     1200   1.038    1.11  /
+   0.665     1600   1.051    1.08  /
+   0.828     2000   1.063    1.06  /
+   0.985     2400   1.075    1.03  /
+   1.130     2800   1.087    1.00  /
+   1.270     3200   1.0985   0.98  /
+   1.390     3600   1.11     0.95  /
+   1.500     4000   1.12     0.94  /
+   1.600     4400   1.13     0.92  /
+   1.676     4800   1.14     0.91  /
+   1.750     5200   1.148    0.9   /
+   1.810     5600   1.155    0.89
+             6000   1.1504   0.89
+             6400   1.1458   0.89
+             6800   1.1412   0.89
+             7200   1.1367   0.89  /
+/
+
+-- SWITCH ON OUTPUT OF ALL PROPS DATA
+RPTPROPS
+ -- PROPS Reporting Options
+ -- 
+ 'PVTO' 'PVDO' 'PVTW' 'PVTG' 'PVDG' 'DENSITY' 'GRAVITY' 'SDENSITY' 'ROCK' 
+ 'ROCKTAB' 
+/
+
+REGIONS  ===============================================================
+-------- THE REGIONS SECTION DEFINES HOW THE RESERVOIR IS SPLIT INTO
+-------- REGIONS BY SATURATION FUNCTION, PVT FUNCTION, FLUID IN PLACE
+-------- REGION ETC.
+------------------------------------------------------------------------
+FIPNUM
+  10*1  10*2  10*3  10*4  10*5  10*6  10*7  10*8  10*9  10*10
+  10*11 10*12 10*13 10*14 10*15  /
+
+-- SWITCH ON OUTPUT OF FIPNUM
+RPTREGS
+  -- Controls on output from regions section
+  -- 
+  'FIPNUM' 
+/
+
+SOLUTION ===============================================================
+-------- THE SOLUTION SECTION DEFINES THE INITIAL STATE OF THE SOLUTION
+-------- VARIABLES (PHASE PRESSURES, SATURATIONS AND GAS-OIL RATIOS)
+------------------------------------------------------------------------
+-- DATA FOR INITIALISING FLUIDS TO POTENTIAL EQUILIBRIUM
+--
+--    DATUM  DATUM   OWC    OWC    GOC    GOC    RSVD   RVVD   SOLN
+--    DEPTH  PRESS  DEPTH   PCOW  DEPTH   PCOG  TABLE  TABLE   METH
+EQUIL
+       9035   3600   9209    0     9035    0       0      0  /
+
+-- SWITCH ON OUTPUT OF INITIAL SOLUTION
+RPTSOL                                           FIELD   16:05 12 DEC 88
+ -- Initialisation Print Output
+ -- 
+ 'PRES' 'SWAT' 'SGAS' 'RS' 'RESTART=2' 'FIP=1' 'EQUIL' /
+ 
+
+SUMMARY ================================================================
+-------- THIS SECTION SPECIFIES DATA TO BE WRITTEN TO THE SUMMARY FILES
+-------- AND WHICH MAY LATER BE USED WITH THE ECLIPSE GRAPHICS PACKAGE
+------------------------------------------------------------------------
+
+-- FIELD Rates for Oil, Water, Liquid & 3 Phase Voidage
+FOPR
+FWPR
+FLPR
+FVPR
+
+-- BOTTOM HOLE PRESSURE FOR WELL
+WBHP
+'P1'
+/
+-- FIELD Water Cut, GOR and Pressure
+FWCT
+FGOR
+FPR
+
+-- SWITCH ON REPORT OF WHAT IS TO GO ON THE SUMMARY FILES
+RPTSMRY
+  1  /
+
+ALL
+
+SCHEDULE ===============================================================
+-------- THE SCHEDULE SECTION DEFINES THE OPERATIONS TO BE SIMULATED
+------------------------------------------------------------------------
+-- CONTROLS ON OUTPUT AT EACH REPORT TIME
+RPTSCHED                                         FIELD   16:07 12 DEC 88
+ 'PRES' 'SWAT' 'SGAS' 'RESTART=2' 'FIP=2' 'WELLS=2' 'CPU=2' 'TUNING' /
+  
+-- FREE GAS IS NOT ALLOWED TO DISSOLVE IN UNDERSATURATED OIL
+DRSDT
+ 0.0 /
+
+-- WELL SPECIFICATION DATA
+--
+--     WELL   GROUP LOCATION  BHP   PI
+--     NAME   NAME    I  J   DEPTH DEFN
+WELSPECS                                         FIELD   16:32 18 JAN 85
+'P1','G       ',  1,  1,9110.00,'OIL' /
+/
+
+-- COMPLETION SPECIFICATION DATA
+--
+--     WELL     -LOCATION- OPEN/ SAT CONN
+--     NAME     I  J K1 K2 SHUT  TAB FACT
+COMPDAT
+    'P1'  1  1  7  7 'OPEN' 0  27.228  /
+    'P1'  1  1  8  8 'OPEN' 0  2.1079  /
+  /
+
+-- PRODUCTION WELL CONTROLS - OIL RATE IS SET TO 1000 BPD
+--
+--      WELL     OPEN/  CNTL   OIL  WATER   GAS  LIQU   RES   BHP
+--      NAME     SHUT   MODE  RATE   RATE  RATE  RATE  RATE
+WCONPROD
+    'P1'  'OPEN' 'ORAT' 1000   4*                      3000  /
+  /
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP
+TUNING
+  1  /
+/
+ 12 1 50 /
+
+-- SPECIFY REPORT AT 10 DAYS
+TSTEP
+ 10.00000
+/
+
+-- CUT OIL RATE TO 100 BPD
+WELTARG
+'P1', 'ORAT'  100.000000 /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP
+TUNING
+  1  /
+/
+ 12 1 50 /
+
+-- ADVANCE SIMULATION TO 50 DAYS
+TSTEP
+ 40.00000
+/
+
+-- PUT OIL RATE BACK TO 1000 BPD
+WELTARG
+'P1', 'ORAT'  1000.00000 /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP
+TUNING
+  1  /
+/
+ 12 1 50 /
+
+
+-- AND ADVANCE TO 720 DAYS - WELL SWITCHES TO BHP CONTROL AT 250 DAYS
+TSTEP
+ 50.00000  100.0000  100.0000  100.0000  100.0000  100.0000  120.0000
+/
+
+-- CUT OIL RATE TO 100 BPD
+WELTARG
+'P1', 'ORAT'  100.000000 /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP
+TUNING
+  1  /
+/
+ 12 1 50 /
+
+-- ADVANCE TO 800 DAYS
+TSTEP
+ 80.00000
+/
+
+-- RESET OUTPUT CONTROLS TO GET FULL OUTPUT FOR LAST REPORT
+RPTSCHED
+ 'PRES' 'SOIL' 'SWAT' 'SGAS' 'RS' 'RV' 'RESTART=2' 'FIP=2' 'WELLS=2'
+ 'VFPPROD=1' 'SUMMARY=2' 'CPU=2' 'AQUCT' 'WELSPECS' 'NEWTON=2'
+ /
+-- ADVANCE TO END OF SIMULATION (900 DAYS)
+TSTEP
+ 100.0000
+/
+
+END      ==============================================================

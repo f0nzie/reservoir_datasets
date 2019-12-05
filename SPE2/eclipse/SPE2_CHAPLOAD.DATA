@@ -1,0 +1,78 @@
+-----------------------------------------------------------------------
+-- THIS CASE IS A SAVE/LOAD TYPE RESTART OF THE CHAP DATASET.
+-- IT USES THE CHAP.SAVE FILE AND THE CHAP.X0009 RESTART FILE.
+-----------------------------------------------------------------------
+
+LOAD
+ 'SPE2_CHAP' /
+
+SOLUTION ===============================================================
+-------- THE SOLUTION SECTION DEFINES THE INITIAL STATE OF THE SOLUTION
+-------- VARIABLES (PHASE PRESSURES, SATURATIONS AND GAS-OIL RATIOS)
+------------------------------------------------------------------------
+
+RESTART
+  'SPE2_CHAP'   9  /
+
+SUMMARY ================================================================
+-------- THIS SECTION SPECIFIES DATA TO BE WRITTEN TO THE SUMMARY FILES
+-------- AND WHICH MAY LATER BE USED WITH THE ECLIPSE GRAPHICS PACKAGE
+------------------------------------------------------------------------
+
+-- FIELD OIL PRODUCTION
+
+FOPR
+
+-- FIELD WATER CUT
+
+FWCT
+
+-- GAS-OIL RATIO FOR WELL
+
+WGOR
+'P1'
+/
+
+-- BOTTOM HOLE PRESSURE FOR WELL
+
+WBHP
+'P1'
+/
+ALL
+
+SCHEDULE ===============================================================
+-------- THE SCHEDULE SECTION DEFINES THE OPERATIONS TO BE SIMULATED
+------------------------------------------------------------------------
+
+-- CUT OIL RATE TO 100 BPD
+
+WELTARG
+'P1', 'ORAT'  100.000000 /
+/
+
+-- SPECIFY UPPER LIMIT OF 1 DAY FOR NEXT TIME STEP
+
+TUNING
+  1 /
+/
+/
+
+RPTSCHED
+   'PRES' 'SWAT' 'SGAS' 'RESTART=2' 'FIP=2' 'WELLS=2' 'CPU=2' 'TUNING' /
+
+-- ADVANCE TO 800 DAYS
+
+TSTEP
+ 80.0  /
+
+RPTSCHED
+    'PRES' 'SOIL' 'SWAT' 'SGAS' 'RS' 'RV' 'RESTART=2' 'FIP=2' 'WELLS=2' 'VFPPROD=1' 
+'SUMMARY=2' 'CPU=2' 'AQUCT' 'WELSPECS' 'NEWTON=2' /
+
+
+-- ADVANCE TO 900 DAYS
+
+TSTEP
+ 100.0  /
+
+END      ==============================================================
