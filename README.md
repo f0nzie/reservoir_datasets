@@ -1,8 +1,8 @@
 # README
 
-Purpose of these datasets is using them for testing using [MRST](https://www.sintef.no/projectweb/mrst/) and its derivative in Pyhon using the machine learning library [PyTorch](https://pytorch.org/).
+Purpose of these datasets is using them for testing using [MRST](https://www.sintef.no/projectweb/mrst/) and its derivative Proof of Concept (POC) in Pyhon using the machine learning library [PyTorch](https://pytorch.org/).
 
-Since `PyTorch` has built-in functionality to work with  Graphics Processing Units or GPUs, we expect demonstrating that `PyTorch` GPU-based tensors could significantly reduce compute time during reservoir simulation.
+Since `PyTorch` has built-in functionality to work with  Graphics Processing Units or GPUs, we expect demonstrating -before embarking in the full porting of MRST-, that `PyTorch` GPU-based tensors could significantly reduce compute time during reservoir simulation.
 
 
 ## Evaluation for Proof of Concept
