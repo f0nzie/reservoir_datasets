@@ -46,6 +46,7 @@ If the compute times are 10 to 100 faster in `PyTorch`, we will proceed with con
 * SPE10 from MRST contains `.dat` and `.mat` files
 * Not all datasets from `OPM` included here; only SPE, SPE9 and SPE10.
 * SPE10 does not download using MRST-2018. It had to be downloaded from another source. MRST-2019 does download SPE10 normally
+* VOLVE and PUNQS3 available for reference at this time. Tests will mainly focused to datasets available in MRST first.
 
 
 
